@@ -1,13 +1,16 @@
+// sampleData.js — BRH-flavored sample data (kept the same export names to avoid breaking imports)
+
 export const exampleAccountInfo = {
-  accountId: "NT-123456",
-  name: "Alex Johnson",
-  phone: "+1-206-135-1246",
-  email: "alex.johnson@email.com",
-  plan: "Unlimited Plus",
-  balanceDue: "$42.17",
-  lastBillDate: "2024-05-15",
-  lastPaymentDate: "2024-05-20",
-  lastPaymentAmount: "$42.17",
+  accountId: "BRH-44219",
+  name: "Laura Jensen",
+  phone: "(206) 135-1246", // match tool expectation '(xxx) xxx-xxxx'
+  email: "laura218@gmail.com",
+  product: "BRH Dog Robot – Companion Patrol",
+  plan: "BRH Care+ 12-month",
+  balanceDue: "$0.00",
+  lastBillDate: "2025-08-15",
+  lastPaymentDate: "2025-08-15",
+  lastPaymentAmount: "$0.00",
   status: "Active",
   address: {
     street: "1234 Pine St",
@@ -15,118 +18,128 @@ export const exampleAccountInfo = {
     state: "WA",
     zip: "98101"
   },
+  lastOrder: {
+    orderId: "ORD-987654",
+    item: "BRH Dog Robot – Companion Patrol (Gen2)",
+    shipMethod: "Expedited",
+    promisedDelivery: "2025-09-07T14:00:00-07:00",
+    trackingCarrier: "UPS",
+    trackingNumber: "1Z999AA10123456784",
+    notes: "Signature required on delivery."
+  },
   lastBillDetails: {
-    basePlan: "$30.00",
-    internationalCalls: "$8.00",
-    dataOverage: "$4.00",
-    taxesAndFees: "$0.17",
-    notes: "Higher than usual due to international calls and data overage."
+    subscription: "$49.00",
+    extendedWarranty: "$9.00",
+    taxesAndFees: "$0.00",
+    notes: "Introductory promo applied for first 12 months."
   }
 };
 
 export const examplePolicyDocs = [
   {
-    id: "ID-010",
-    name: "Family Plan Policy",
-    topic: "family plan options",
+    id: "ID-201",
+    name: "Humanoid Warranty Policy",
+    topic: "humanoid warranty",
     content:
-      "The family plan allows up to 5 lines per account. All lines share a single data pool. Each additional line after the first receives a 10% discount. All lines must be on the same account.",
+      "BRH Humanoids include a 12-month limited warranty covering manufacturing defects and critical components (actuators, vision sensors, primary compute). Accidental damage and consumables are excluded. Extended coverage available under Care+."
   },
   {
-    id: "ID-020",
-    name: "Promotions and Discounts Policy",
-    topic: "promotions and discounts",
+    id: "ID-202",
+    name: "Dog Robot Returns Policy",
+    topic: "dog robot return policy",
     content:
-      "The Summer Unlimited Data Sale provides a 20% discount on the Unlimited Plus plan for the first 6 months for new activations completed by July 31, 2024. The Refer-a-Friend Bonus provides a $50 bill credit to both the referring customer and the new customer after 60 days of active service, for activations by August 31, 2024. A maximum of 5 referral credits may be earned per account. Discounts cannot be combined with other offers.",
+      "Dog robots may be returned within 30 days of delivery in original condition with all accessories and packaging. Return shipping label provided upon approval. Restocking fees may apply for missing parts."
   },
   {
-    id: "ID-030",
-    name: "International Plans Policy",
-    topic: "international plans",
+    id: "ID-203",
+    name: "Aegis Vision Deployment Policy",
+    topic: "aegis vision deployment",
     content:
-      "International plans are available and include discounted calling, texting, and data usage in over 100 countries.",
+      "Aegis Vision supports on-device AI, offline operation, and privacy modes (face blurring, data retention controls). Installations must pass a site survey and adhere to local compliance requirements."
   },
   {
-    id: "ID-040",
-    name: "Handset Offers Policy",
-    topic: "new handsets",
+    id: "ID-204",
+    name: "Demo & Trial Policy",
+    topic: "demo scheduling",
     content:
-      "Handsets from brands such as iPhone and Google are available. The iPhone 16 is $200 and the Google Pixel 8 is available for $0, both with an additional 18-month commitment. These offers are valid while supplies last and may require eligible plans or trade-ins. For more details, visit one of our stores.",
+      "Qualified customers can book a live demo (in-person or virtual). Trials require a refundable deposit and a short agreement outlining safe operation and return conditions."
   },
+  {
+    id: "ID-205",
+    name: "Offline Agent Privacy Brief",
+    topic: "offline agent privacy",
+    content:
+      "The BRH Offline Agent runs on-device and can function without internet. Defaults to local processing with optional encrypted sync. No cloud transfer occurs unless explicitly enabled by the user."
+  }
 ];
 
 export const exampleStoreLocations = [
-  // NorCal
+  // West
   {
-    name: "NewTelco San Francisco Downtown Store",
+    name: "BotsRHere Seattle Experience Center",
+    address: "1st Ave & Pine St, Seattle, WA",
+    zip_code: "98101",
+    phone: "(206) 555-1101",
+    hours: "Mon–Sat 10am–7pm, Sun 11am–5pm"
+  },
+  {
+    name: "BotsRHere San Francisco Showroom",
     address: "1 Market St, San Francisco, CA",
     zip_code: "94105",
-    phone: "(415) 555-1001",
-    hours: "Mon-Sat 10am-7pm, Sun 11am-5pm"
+    phone: "(415) 555-1202",
+    hours: "Mon–Sat 10am–8pm, Sun 11am–6pm"
   },
   {
-    name: "NewTelco San Jose Valley Fair Store",
-    address: "2855 Stevens Creek Blvd, Santa Clara, CA",
-    zip_code: "95050",
-    phone: "(408) 555-2002",
-    hours: "Mon-Sat 10am-8pm, Sun 11am-6pm"
-  },
-  {
-    name: "NewTelco Sacramento Midtown Store",
-    address: "1801 L St, Sacramento, CA",
-    zip_code: "95811",
-    phone: "(916) 555-3003",
-    hours: "Mon-Sat 10am-7pm, Sun 12pm-5pm"
-  },
-  // SoCal
-  {
-    name: "NewTelco Los Angeles Hollywood Store",
+    name: "BotsRHere Los Angeles Studio",
     address: "6801 Hollywood Blvd, Los Angeles, CA",
     zip_code: "90028",
-    phone: "(323) 555-4004",
-    hours: "Mon-Sat 10am-9pm, Sun 11am-7pm"
+    phone: "(323) 555-1303",
+    hours: "Mon–Sat 10am–9pm, Sun 11am–7pm"
+  },
+
+  // Central
+  {
+    name: "BotsRHere Austin Lab",
+    address: "500 W 2nd St, Austin, TX",
+    zip_code: "78701",
+    phone: "(512) 555-1404",
+    hours: "Mon–Sat 10am–7pm, Sun 12pm–6pm"
   },
   {
-    name: "NewTelco San Diego Gaslamp Store",
-    address: "555 5th Ave, San Diego, CA",
-    zip_code: "92101",
-    phone: "(619) 555-5005",
-    hours: "Mon-Sat 10am-8pm, Sun 11am-6pm"
+    name: "BotsRHere Chicago Hub",
+    address: "233 S Wacker Dr, Chicago, IL",
+    zip_code: "60606",
+    phone: "(312) 555-1505",
+    hours: "Mon–Sat 10am–7pm, Sun 12pm–5pm"
   },
+
+  // East
   {
-    name: "NewTelco Irvine Spectrum Store",
-    address: "670 Spectrum Center Dr, Irvine, CA",
-    zip_code: "92618",
-    phone: "(949) 555-6006",
-    hours: "Mon-Sat 10am-8pm, Sun 11am-6pm"
-  },
-  // East Coast
-  {
-    name: "NewTelco New York City Midtown Store",
+    name: "BotsRHere New York Flagship",
     address: "350 5th Ave, New York, NY",
     zip_code: "10118",
-    phone: "(212) 555-7007",
-    hours: "Mon-Sat 9am-8pm, Sun 10am-6pm"
+    phone: "(212) 555-1606",
+    hours: "Mon–Sat 9am–8pm, Sun 10am–6pm"
   },
   {
-    name: "NewTelco Boston Back Bay Store",
+    name: "BotsRHere Boston Back Bay",
     address: "800 Boylston St, Boston, MA",
     zip_code: "02199",
-    phone: "(617) 555-8008",
-    hours: "Mon-Sat 10am-7pm, Sun 12pm-6pm"
+    phone: "(617) 555-1707",
+    hours: "Mon–Sat 10am–7pm, Sun 12pm–6pm"
   },
   {
-    name: "NewTelco Washington DC Georgetown Store",
+    name: "BotsRHere DC Georgetown",
     address: "1234 Wisconsin Ave NW, Washington, DC",
     zip_code: "20007",
-    phone: "(202) 555-9009",
-    hours: "Mon-Sat 10am-7pm, Sun 12pm-5pm"
+    phone: "(202) 555-1808",
+    hours: "Mon–Sat 10am–7pm, Sun 12pm–5pm"
   },
   {
-    name: "NewTelco Miami Beach Store",
+    name: "BotsRHere Miami Beach",
     address: "1601 Collins Ave, Miami Beach, FL",
     zip_code: "33139",
-    phone: "(305) 555-1010",
-    hours: "Mon-Sat 10am-8pm, Sun 11am-6pm"
+    phone: "(305) 555-1909",
+    hours: "Mon–Sat 10am–8pm, Sun 11am–6pm"
   }
 ];
